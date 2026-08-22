@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:text="Thống kê"
                     android:textColor="#FFFFFF"
-                    android:textSize="22sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <androidx.cardview.widget.CardView

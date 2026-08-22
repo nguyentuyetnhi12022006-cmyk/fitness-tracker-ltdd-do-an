@@ -75,12 +75,22 @@ public class ProfileActivity2 extends AppCompatActivity {
             txtTargetWeight.setText(String.format(Locale.US, "%.1f kg", manager.getProfileTargetWeight()));
         }
 
+        // Xử lý làm sạch ký tự thừa cho Mục tiêu
         if (tvGoalDisplay != null) {
-            tvGoalDisplay.setText(manager.getProfileGoal() + "  ›");
+            String goal = manager.getProfileGoal();
+            if (goal != null) {
+                goal = goal.replace("›", "").trim();
+            }
+            tvGoalDisplay.setText(goal != null && !goal.isEmpty() ? goal : "Giảm cân");
         }
 
+        // Xử lý làm sạch ký tự thừa cho Mức hoạt động
         if (tvActivityDisplay != null) {
-            tvActivityDisplay.setText(manager.getCalculatedActivityLevel());
+            String activityLevel = manager.getCalculatedActivityLevel();
+            if (activityLevel != null) {
+                activityLevel = activityLevel.replace("›", "").trim();
+            }
+            tvActivityDisplay.setText(activityLevel != null && !activityLevel.isEmpty() ? activityLevel : "Vừa phải");
         }
     }
 

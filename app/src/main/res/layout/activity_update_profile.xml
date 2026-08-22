@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B1831">
+    android:background="#121026">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,31 +11,33 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- HEADER -->
-        <LinearLayout
+        <!-- HEADER (Đã đồng bộ nút quay lại dạng icon giống các trang khác) -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical">
+            android:layout_height="60dp">
 
-            <TextView
+            <ImageView
                 android:id="@+id/btnBack"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:gravity="center"
-                android:text="‹"
-                android:textColor="#FFFFFF"
-                android:textSize="40sp" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="#FFFFFF"
+                android:clickable="true"
+                android:focusable="true" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_centerInParent="true"
                 android:text="Cập nhật hồ sơ"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <!-- CẬP NHẬT CÂN NẶNG -->
         <TextView
@@ -44,14 +46,14 @@
             android:layout_marginTop="18dp"
             android:text="Cập nhật cân nặng hiện tại"
             android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#252142"
+            app:cardBackgroundColor="#1D1A38"
             app:cardCornerRadius="18dp"
             app:cardElevation="0dp">
 
@@ -64,11 +66,11 @@
                 <TextView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:background="#4B3186"
+                    android:background="#1D1A38"
                     android:gravity="center"
                     android:text="⚖"
                     android:textColor="#FFFFFF"
-                    android:textSize="38sp" />
+                    android:textSize="45sp" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -88,7 +90,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="8dp"
-                        android:background="#211D39"
+                        android:background="#252142"
                         android:gravity="center_vertical">
 
                         <EditText
@@ -125,14 +127,14 @@
             android:layout_marginTop="24dp"
             android:text="Cập nhật mục tiêu cân nặng"
             android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#252142"
+            app:cardBackgroundColor="#1D1A38"
             app:cardCornerRadius="18dp"
             app:cardElevation="0dp">
 
@@ -150,10 +152,10 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:background="#4B3186"
+                        android:background="#1D1A38"
                         android:gravity="center"
                         android:text="🎯"
-                        android:textSize="35sp" />
+                        android:textSize="45sp" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -173,7 +175,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="55dp"
                             android:layout_marginTop="8dp"
-                            android:background="#211D39"
+                            android:background="#252142"
                             android:gravity="center_vertical">
 
                             <EditText
@@ -247,14 +249,14 @@
             android:layout_marginTop="24dp"
             android:text="Tốc độ thay đổi cân nặng"
             android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#252142"
+            app:cardBackgroundColor="#1D1A38"
             app:cardCornerRadius="18dp"
             app:cardElevation="0dp">
 
@@ -323,14 +325,14 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- NGÀY DỰ KIẾN (Đã đồng bộ icon lịch hệ thống màu tím #A78BFA) -->
+        <!-- NGÀY DỰ KIẾN -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Ngày dự kiến đạt mục tiêu"
             android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -338,7 +340,7 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginTop="12dp"
-            android:background="#252142"
+            android:background="#1D1A38"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingHorizontal="16dp"

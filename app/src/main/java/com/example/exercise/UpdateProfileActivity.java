@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -29,7 +30,8 @@ public class UpdateProfileActivity extends AppCompatActivity {
     RadioGroup rgGoal;
     RadioButton rbLose, rbMaintain, rbGain;
     SeekBar seekRate;
-    TextView txtRate, txtTargetDate, btnBack;
+    TextView txtRate, txtTargetDate;
+    ImageView btnBack; // Đã đổi sang ImageView để khớp với XML mới
     LinearLayout btnSelectTargetDate;
     Button btnSaveProfile;
 
@@ -210,7 +212,6 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 year, month, day
         );
 
-        // Tùy chỉnh màu sắc lịch chuẩn tông tím tối giống WaterJournalActivity
         datePickerDialog.setOnShowListener(dialog -> {
             if (datePickerDialog.getWindow() != null) {
                 datePickerDialog.getWindow().setBackgroundDrawable(

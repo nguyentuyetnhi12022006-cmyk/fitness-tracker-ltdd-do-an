@@ -18,10 +18,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 1. HEADER NHẬT KÝ VẬN ĐỘNG + ICON LỊCH -->
+            <!-- 1. HEADER NHẬT KÝ VẬN ĐỘNG (ĐÃ CĂN GIỮA TIÊU ĐỀ) -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp">
 
@@ -29,6 +29,7 @@
                     android:id="@+id/btnBack"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
+                    android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:padding="4dp"
                     android:src="@android:drawable/ic_menu_revert"
@@ -37,9 +38,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_toEndOf="@id/btnBack"
+                    android:layout_centerInParent="true"
                     android:text="Nhật ký vận động"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
@@ -249,113 +248,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <!-- 6. BOTTOM NAVIGATION BAR -->
-    <LinearLayout
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        android:background="#1D1A38"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/menuHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🏠"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trang chủ"
-                android:textColor="#8E8B9E"
-                android:textSize="11sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuJournal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📋"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nhật ký"
-                android:textColor="#A78BFA"
-                android:textSize="11sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuAnalytics"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📊"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thống kê"
-                android:textColor="#8E8B9E"
-                android:textSize="11sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuProfile"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="👤"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hồ sơ"
-                android:textColor="#8E8B9E"
-                android:textSize="11sp" />
-        </LinearLayout>
-    </LinearLayout>
-
 </RelativeLayout>
